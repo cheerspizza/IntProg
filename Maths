@@ -1,0 +1,239 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyOWKau9AgS+ZuSKR+SvgdB1",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/cheerspizza/IntProg/blob/main/Maths\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "w14AoYDI__4c"
+      },
+      "outputs": [],
+      "source": [
+        "\n",
+        "def n_funcion(param1, param2):\n",
+        "  argumento\n",
+        "  return valores de salida\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "### lA FUNCIN PORCENTAJE CALCULA EL PORCENTAJE\n",
+        "### A LA CUAL CORRESPONDE LOS VALORES x e y\n",
+        "### x+y es el 100%\n",
+        "\n",
+        "def porcentaje(x,y):\n",
+        "  return 100*x/(x+y), 100*y/(x+y)\n",
+        "print(porcentaje(30,45))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "TLhce8m5JHqJ",
+        "outputId": "bf744507-ead3-4321-90f7-0a616a1ed67e"
+      },
+      "execution_count": 2,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "(40.0, 60.0)\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#La funcion porcentaje_2:\n",
+        "#####Entrada: x - corresponde al 100%, y - porcentaje que se quiere hallar\n",
+        "#####Salida: cantidad a ala que corresponde el porcentaje y"
+      ],
+      "metadata": {
+        "id": "o2XeoMefOhnX"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def porcentaje_2(x,y):\n",
+        "  return (y*x)/100\n",
+        "print(porcentaje_2(1500000,100))\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "n_WgQjiiPDuF",
+        "outputId": "7d465ae8-ba4f-4a35-8f38-2d27d76d9e42"
+      },
+      "execution_count": 4,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "1500000.0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#Funcion porcentaje_1\n",
+        "####Entrada: x correspode al 100%, y cantidad menor que x\n",
+        "####Salida: porcentaje al que corresponde la cantidad y\\\n"
+      ],
+      "metadata": {
+        "id": "4cn_NboVRXVT"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def porcentaje_1(x,y):\n",
+        "  return (y*100)/x\n",
+        "print(porcentaje_1(1500000,130000))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "N07Fom1vSY-o",
+        "outputId": "3f9d016c-7fae-44f7-d47e-986320c67fd9"
+      },
+      "execution_count": 5,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "8.666666666666666\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#Modulo Sympy\n",
+        "### Usando el modulo sympy, se pueden realizar simplificaciones de expresiones con exponentes"
+      ],
+      "metadata": {
+        "id": "hviDl9E1T3oG"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import sympy\n",
+        "a= sympy.Symbol(\"a\")\n",
+        "b= sympy.Symbol(\"b\")\n",
+        "expresion= (2*a**3*b**2)*(3*a*b**4)**3\n",
+        "simp= sympy.simplify(expresion)\n",
+        "print(simp)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "NOrg_y3lUSVO",
+        "outputId": "c7d62dba-e102-4ba8-9062-1548666c5d15"
+      },
+      "execution_count": 7,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "54*a**6*b**14\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import sympy\n",
+        "x= sympy.Symbol(\"x\")\n",
+        "y= sympy.Symbol(\"y\")\n",
+        "z= sympy.Symbol(\"z\")\n",
+        "expresion= (x/y)**3*((y**2*x)/(z))**4\n",
+        "simp= sympy.simplify(expresion)\n",
+        "print(simp)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "c9TrFTMHVejd",
+        "outputId": "3fb2d567-8fb0-4e92-e6ce-39cd67859da7"
+      },
+      "execution_count": 9,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "x**7*y**5/z**4\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import sympy\n",
+        "x= sympy.Symbol(\"x\",positive=True)\n",
+        "expresion= (16*x**8)**(1/4)\n",
+        "simp= sympy.simplify(expresion)\n",
+        "print(simp)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "jIaCN3fkW8HT",
+        "outputId": "e240b6d6-6255-4662-ad8c-e1214bc224f8"
+      },
+      "execution_count": 12,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "2.0*x**2.0\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
